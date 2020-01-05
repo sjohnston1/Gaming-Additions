@@ -20,13 +20,15 @@ class ClickMouse(threading.Thread):
 
     def start_clicking(self):
         self.running = True
+        print("clicking")
 
     def stop_clicking(self):
         self.running = False
+        print("stopping")
 
     def exit(self):
         self.stop_clicking()
-        self.program_running = False
+        #self.program_running = False
 
     def run(self):
         while self.program_running:
